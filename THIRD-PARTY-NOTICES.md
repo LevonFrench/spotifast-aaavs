@@ -42,8 +42,7 @@ in this repository. Versions are the ones locked in
 
 These crates bring in further crates. `Cargo.lock` names all 605 third-party
 packages with their versions and sources; it covers every platform, so a
-Windows build links only part of them. The licences they declare on crates.io,
-read on 2026-11-14:
+Windows build links only part of them. The licences they declare on crates.io:
 
 - 578 are under permissive licences, alone or as a choice: MIT, Apache-2.0
   (some with the LLVM exception), ISC, Zlib, BSD-2-Clause, BSD-3-Clause, 0BSD,
@@ -65,6 +64,10 @@ crates linked into it. `cargo about` and `cargo license` produce that list
 from `Cargo.lock`. The Mozilla Public License 2.0 asks that the source of the
 files under it stay available under that licence.
 
+`tools/build-spotifast.ps1` does not yet assemble these licence texts: it
+copies only `SPOTIFAST-LICENSE.txt` into a package. Do not redistribute a built
+package until the crate licence texts are added to it.
+
 ## Tools and code borrowed from AAAVS
 
 This project installs no npm packages. Builds and checks use these from the
@@ -83,13 +86,15 @@ bundles. Their notices are in AAAVS's `THIRD-PARTY-NOTICES.md`.
 A built package also contains a copy of `node.exe` from the installed
 [Node.js](https://nodejs.org), under the Node.js licence, and needs the
 Microsoft WebView2 runtime, which is installed separately and is not
-redistributed.
+redistributed. `tools/build-spotifast.ps1` copies `node.exe` from the Node.js on
+the build machine's `PATH` and does not copy the Node.js `LICENSE` file, so a
+package must not be redistributed until that licence text is added to it.
 
 ## Spotify
 
 No Spotify SDK, code, artwork or logo is included in this repository. The
 sidecar calls the Spotify Web API with a Client ID that each user registers
-for their own Spotify developer app, under Spotify's Developer Terms. Audio is
+for their own Spotify developer app, under [Spotify's Developer Terms](https://developer.spotify.com/terms). Audio is
 decoded by librespot, an independent open-source library that is not made by
 Spotify. Album covers are fetched from Spotify at run time; the sidecar does
 not save them.

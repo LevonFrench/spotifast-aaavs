@@ -4,7 +4,7 @@
   "private": true,
   "license": "MIT",
   "type": "module",
-  "description": "Windows desktop player (local files and Spotify) that shows AAAVS. Separate project; AAAVS is consumed from a sibling checkout.",
+  "description": "Windows desktop player (local files and Spotify) that shows AAAVS. AAAVS is a separate project, read from a folder beside this one.",
   "scripts": {
     "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-spotifast.ps1",
     "build:native": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-spotifast.ps1 -NativeOnly",

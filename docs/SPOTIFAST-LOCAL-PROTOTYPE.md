@@ -24,7 +24,7 @@ The app reads the preset collection of the AAAVS checkout it was built
 against: the `avs presets` folder there. The catalogue
 (`avs presets\catalog\presets.json`), star ratings, rated filenames and
 not-working flags go through AAAVS's library service. Settings, setups and
-folders use that collection's `.aaavs-private` folder and its file locks.
+folders use that collection's private settings folder and its file locks.
 Nothing is imported, migrated or cloned into a second preset collection.
 
 A change made here is visible to the AAAVS Player after it reloads its

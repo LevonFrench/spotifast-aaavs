@@ -80,6 +80,10 @@ A built package is the executable, `node.exe`, `server\`, a `renderer-<time>`
 folder, `renderer-path.txt` and `aaavs-root.txt`. Presets, ratings and settings
 are not copied; they are read from the AAAVS folder named in `aaavs-root.txt`.
 
+The build script does not yet add the Node.js licence file or the licence texts
+of the Rust crates to the package (see [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)).
+Do not redistribute a built package until it does.
+
 ## Spotify
 
 You connect with your own Spotify developer app: the player asks for its public
@@ -90,7 +94,8 @@ disk. Playback needs Spotify Premium. The steps are in
 
 This project is not affiliated with, sponsored by or endorsed by Spotify.
 Spotify is a trademark of Spotify AB. Use of the Spotify Web API and of
-librespot is subject to Spotify's terms.
+librespot is subject to Spotify's terms, including the
+[Developer Terms](https://developer.spotify.com/terms).
 
 ## Licence
 

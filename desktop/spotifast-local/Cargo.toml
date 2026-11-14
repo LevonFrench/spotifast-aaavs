@@ -3,6 +3,7 @@ name = "spotifast-aaavs"
 version = "0.1.0"
 edition = "2024"
 publish = false
+license = "MIT"
 
 [dependencies]
 # The desktop host uses the installed Windows WebView2 runtime for AAAVS.
