@@ -1,0 +1,33 @@
+[package]
+name = "spotifast-aaavs"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[dependencies]
+# The desktop host uses the installed Windows WebView2 runtime for AAAVS.
+wry = "0.57.1"
+tao = "0.37"
+rfd = "0.15"
+serde_json = "1"
+log = "0.4"
+thiserror = "2"
+# These are the dependencies of Spotifast's unchanged output/resampler modules.
+fastframe-audio = { git = "https://github.com/crmne/fastframe", tag = "v0.16.1" }
+librespot-playback = { version = "0.8", default-features = false, features = ["rustls-tls-native-roots"] }
+rodio = { version = "0.21", default-features = false }
+# Local-file decoding remains independent of the optional Spotify session.
+symphonia = { version = "0.5", features = ["all"] }
+librespot-core = { version = "0.8", default-features = false, features = ["rustls-tls-native-roots"] }
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time", "macros"] }
+# Opens the user-requested Spotify authorization page in the system browser.
+open = "5"
+
+[dev-dependencies]
+librespot-metadata = { version = "0.8", default-features = false }
+
+[features]
+milkdrop = []
+
+[profile.release]
+strip = true

@@ -1,0 +1,19 @@
+{
+  "name": "spotifast-aaavs",
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "description": "Windows desktop player (local files and Spotify) that shows AAAVS. Separate project; AAAVS is consumed from a sibling checkout.",
+  "scripts": {
+    "build": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-spotifast.ps1",
+    "build:native": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-spotifast.ps1 -NativeOnly",
+    "build:renderer": "node tools/build-renderer.mjs",
+    "test:native": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/build-spotifast.ps1 -Test",
+    "check:types": "node tools/check-types.mjs",
+    "check": "node tools/check-types.mjs && node tools/check-spotifast-spotify.mjs && node tools/check-spotifast.mjs",
+    "check:spotify": "node tools/check-spotifast-spotify.mjs",
+    "check:spotify:browser": "node tools/check-spotifast-spotify-browser.mjs",
+    "check:output": "powershell -NoProfile -ExecutionPolicy Bypass -File tools/check-spotifast-output.ps1"
+  }
+}

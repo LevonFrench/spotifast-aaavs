@@ -1,0 +1,45 @@
+# Build output, the project-local Rust toolchain, built packages and check evidence
+/.local/
+/desktop/spotifast-local/target/
+node_modules/
+
+# Written beside a built executable when it runs
+webview-data/
+startup-error.txt
+
+# Private notes and working files never belong in this repository
+/.private/
+/AGENCY.md
+/AGENTS.md
+/CLAUDE.md
+/HANDOFF*.md
+/.claude/
+/.codex/
+/.agents/
+
+# Logs, environment files and editor state
+*.log
+.env
+.env.*
+/.vscode/
+/.idea/
+
+# Music and video never belong in this repository
+*.mp3
+*.flac
+*.wav
+*.m4a
+*.ogg
+*.opus
+*.aac
+*.wma
+*.lrc
+*.mp4
+*.mkv
+*.webm
+
+# Built binaries and packages
+*.exe
+*.pdb
+*.obj
+*.zip

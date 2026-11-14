@@ -1,0 +1,6 @@
+# The repository stores LF for every text file, whatever editor wrote it.
+* text=auto eol=lf
+
+# Windows scripts run by cmd keep CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
